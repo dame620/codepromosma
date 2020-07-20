@@ -5,7 +5,7 @@
     grid-template-columns: 27% 34% 33%;
     grid-column-gap: 2%;
     grid-row-gap: 21px;
-    background-color: plum;
+    background-color: rgb(244, 233, 252);
 }
 
  /*css baner debut*/
@@ -54,7 +54,7 @@ le header contient le navbar voici son css
   }
 
 .containerun{
-    background-color: rgb(29, 141, 67);
+    background-color: plum;
     border: solid 1px white; 
     grid-column: 2;
     grid-row: 3;
@@ -67,7 +67,7 @@ le header contient le navbar voici son css
 }
 
 .containerdeux{
-    background-color: rgb(29, 141, 67);
+    background-color: plum;
     border: solid 1px white; 
     grid-column: 3;
     grid-row: 3;
@@ -75,7 +75,7 @@ le header contient le navbar voici son css
 }
 
 .containertrois{
-    background-color: rgb(29, 141, 67);
+    background-color: plum;
     border: solid 1px white; 
     grid-column: 2;
     grid-row: 4;
@@ -83,7 +83,7 @@ le header contient le navbar voici son css
 }
 
 .containerquatre{
-    background-color: rgb(29, 141, 67);
+    background-color: rgb(192, 176, 209);
     border: solid 1px white; 
     grid-column: 3;
     grid-row: 4;
@@ -91,7 +91,7 @@ le header contient le navbar voici son css
 }
 
 .containercinq{
-    background-color: rgb(29, 141, 67);
+    background-color: rgb(192, 176, 209);
     border: solid 1px white; 
     grid-column: 2;
     grid-row: 5;
@@ -99,7 +99,11 @@ le header contient le navbar voici son css
 }
 
 .container{
+ /*display: flex;
+ flex-direction: column;
+ align-items: center;*/
  align-content: center;
+
 }
 /*CSS DU MODAL*/
 
