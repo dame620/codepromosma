@@ -5,333 +5,315 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="codeindex.css">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+   
+    <!--link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script-->
 </head>
 <body>
-   
+
+  <button class="hamburger-button" id="hamburger-button"><i class="fa fa-bars"></i></button>
+  <div class="sidenav" id="sidenav">
+    <div class="sidenav-title">
+      <h1><span>categories</span><button id="sidenav-closer"><i class="fa fa-times"></i></button></h1>
+      <h3>toutes les catégories</h3>
+    </div>
+    <form action="" class="sidenav-categories">
+      <div class="sidenav-category-field">
+        <input type="checkbox">
+        <label for="">deco , amenagement maison et cuisine</label>
+      </div>
+      <div class="sidenav-category-field">
+        <input type="checkbox">
+        <label for="">deco , amenagement maison et cuisine</label>
+      </div>
+      <div class="sidenav-category-field">
+        <input type="checkbox">
+        <label for="">deco , amenagement maison et cuisine</label>
+      </div>
+      <div class="sidenav-category-field">
+        <input type="checkbox">
+        <label for="">deco , amenagement maison et cuisine</label>
+      </div>
+      <div class="sidenav-category-field">
+        <input type="checkbox">
+        <label for="">deco , amenagement maison et cuisine</label>
+      </div>
+      <div class="sidenav-category-field">
+        <input type="checkbox">
+        <label for="">deco , amenagement maison et cuisine</label>
+      </div>
+      <div class="sidenav-category-field">
+        <input type="checkbox">
+        <label for="">deco , amenagement maison et cuisine</label>
+      </div>
+
+      <button type="submit" class="btn-categories-filter">Filtrer</button>
+    </form>
+  </div>
+
+   <div class="modal-overlay" id="modal-overlay">
+      <div class="modal">
+        <div class="modal-header">
+          <h4>DETAILS</h4>
+          <button class="modal-closer" id="modal-closer" data-target="#modal-overlay"><i class="fa fa-times"></i></button>
+
+        </div>
+        <div class="modal-body">
+          <img src="lesimages/iconasos.png" alt="">
+          <div class="modal-codepromo">
+            <span> 14FABFAB</span>
+          </div>
+          <a class="modal-code-promo-link" href="">
+            LIEN VERS LA PAGE
+          </a>
+        </div>
+        <div class="modal-footer">
+          <div class="modal-expiration">
+           <span>
+             EXPIRERA LE 02 JUIN 2020 À 23h:00
+           </span>
+          </div>
+          <div class="modal-description">
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eos
+          </div>
+        </div>
+      </div>
+   </div>
+
     <section class="site">
-        <img src="lesimages/baner2.png" class="imgbaner" alt="image baner"> 
-        <header class="header">
-            <ul>
-                <li>
-                    <button type="submit">FILTER</button>
-                 </li>
-        
-                <li>
-                    <input type="checkbox" id="" name="" value="">
-                    <label for="">EU</label><br><br>
-                </li>
-        
-        
-                <li>
-                    <input type="checkbox" id="" name="" value="">
-                    <label for="">CHINA</label><br><br>
-                </li>
-        
-        
-                <li>
-                    <input type="checkbox" id="" name="" value="">
-                    <label for="">USA</label><br><br>
-                </li>
-        
-        <div class="searchandicon">
-            <img src="" alt="" class="imgiconsearch" style="width: 2%;">
-            <input type="text" placeholder="Search.." name="search">
-        </div>
-                
-                
-            </ul>
-        </header>
-        <aside class="sidebar">
-            <form action="">
-                
-                <h5>CATÉGORIES</h5>
-                <img src="lesimages/iconun.png" alt="image icone" class="imgicon">
-                <p>TOUTES LES CATÉGORIES</p> 
-                
-                
-                <hr>
-                <input type="checkbox" id="" name="" value="">
-                <label for="">Vetements mode et accessoires</label><br>
-
-                <input type="checkbox" id="vehicle3" name="" value="">
-                <label for=""> St Valentin</label><br><br>
-
-                <input type="checkbox" id="" name="" value="">
-                <label for="">Beaute et Soins du corps</label><br>
-
-                <input type="checkbox" id="" name="" value="Boat">
-                <label for=""> Enfance Puericulture et Maternité</label><br><br>
-
-                <input type="checkbox" id="" name="" value="">
-                <label for=""> Sport fitness et nutrition</label><br>
-
-                <input type="checkbox" id="" name="" value="">
-                <label for=""> Loisirs jeux et Detente</label><br><br>
-
-                <input type="checkbox" id="" name="" value="">
-                <label for=""> deco , amenagement maison et cuisine</label><br>
-
-                <input type="checkbox" id="vehicle1" name="vehicle1" value="Bike">
-                <label for="">Mecanique, Auto, Moto, Bateau </label><br><br>
-
-                <input type="checkbox" id="" name="" value="">
-                <label for="">Telephone</label><br>
-
-                <input type="checkbox" id="" name="" value="">
-                <label for=""> Informatique</label><br><br>
-
-                <input type="checkbox" id="" name="" value="">
-                <label for=""> Divers</label><br>
-                <hr>
-               
-                <input type="submit" value="FILTER" style="background-color: hsl(308, 82%, 30%); width: 100%; height: 31px; color:white; ">
-              </form>
-
-        </aside>
-        
-        <div class="containerun">
-            <img src="lesimages/cdiscountun.png" alt="img c discount" class="imgcontun">
-            <!-- debut contenu du bas -->
-            <div class="container">
-                <a href="www.cdiscount.com" style="color: black;">www.cdiscount.com</a><br><br>
-                <!-- debut Modal -->
-                
-                <!-- Trigger the modal with a button -->
-                <button type="button" class="btn-sm" data-toggle="modal" data-target="#myModal" style="color: white;"><SMall>DÉCOUVRIR L'OFFRE</SMall></button><br><br>
-               
-               
-          
-                <!-- Modal -->
-                <div class="modal fade" id="myModal" role="dialog">
-                  <div class="modal-dialog">
-                  
-                    <!-- Modal content-->
-                    <div class="modal-content">
-                      <div class="modal-header">
-                        <button type="button" class="close" data-dismiss="modal">&times;</button>
-                        <h4 class="modal-title">DETAILS</h4>
-                      </div>
-                      <div class="modal-body">
-                        <h2>cdiscount</h2>
-                        <button type="button" style=" background-color: whitesmoke; height: 37px; width:100%;">
-                          <p> 50FABFAB</p>
-                        </button><br><br>
-                        <button type="button" style="float: right; background-color: hsl(308, 82%, 30%); height: 33px;">
-                          <a href="www.cdiscount.com" style="color:white;">LIENS VERS LA PAGE</a>
-                        </button><br><br>
-                        <button type="button" style=" background-color: plum; height: 37px; width:100%; color:  hsl(308, 82%, 30%);">
-                          <p> EXPIRE LE 02 JUIN 2020 À 23h:59</p>
-                        </button><br><br>
-                      </div>
-                      <div class="modal-footer">
-                        <button type="button" class="btn btn-default" data-dismiss="modal">FERMER</button>
-                      </div>
-                    </div>
-                    
-                  </div>
-                </div>
-                <!-- fin modal-->
-                <p>PAS DE CODE NECESSAIRE</p>
-              </div>
-                <!-- fin container bas-->
-        </div>
-
-        <div class="containerdeux">
-            <img src="lesimages/asosun.png" alt="asos" class="imgcontun">
-             <!-- debut contenu du bas -->
-            <div class="container">
-              <a href="www.cdiscount.com" style="color: black;">www.asos.com</a><br><br>
-              <!-- debut Modal -->
-              
-              <!-- Trigger the modal with a button -->
-              <button type="button" class="btn-sm" data-toggle="modal" data-target="#myModal" style="color: white;"><SMall>DÉCOUVRIR L'OFFRE</SMall></button><br><br>
-             
-             
-        
-              <!-- Modal -->
-              <div class="modal fade" id="myModal" role="dialog">
-                <div class="modal-dialog">
-                
-                  <!-- Modal content-->
-                  <div class="modal-content">
-                    <div class="modal-header">
-                      <button type="button" class="close" data-dismiss="modal">&times;</button>
-                      <h4 class="modal-title">DETAILS</h4>
-                    </div>
-                    <div class="modal-body">
-                      <h2>cdiscount</h2>
-                      <button type="button" style=" background-color: whitesmoke; height: 37px; width:100%;">
-                        <p> 50FABFAB</p>
-                      </button><br><br>
-                      <button type="button" style="float: right; background-color: hsl(308, 82%, 30%); height: 33px;">
-                        <a href="www.cdiscount.com" style="color:white;">LIENS VERS LA PAGE</a>
-                      </button><br><br>
-                      <button type="button" style=" background-color: plum; height: 37px; width:100%; color:  hsl(308, 82%, 30%);">
-                        <p> EXPIRE LE 02 JUIN 2020 À 23h:59</p>
-                      </button><br><br>
-                    </div>
-                    <div class="modal-footer">
-                      <button type="button" class="btn btn-default" data-dismiss="modal">FERMER</button>
-                    </div>
-                  </div>
-                  
-                </div>
-              </div>
-              <!-- fin modal-->
-              <p>50FABFAB</p>
-            </div>
-              <!-- fin container bas-->
-        </div>
-
-        <div class="containertrois">
-            <img src="lesimages/nikeun.png" alt="nike" class="imgcontun">
-                
-             <!-- debut contenu du bas -->
-            <div class="container">
-              <a href="www.nike.com" style="color: black;">www.nike.com</a><br><br>
-              <!-- debut Modal -->
-              
-              <!-- Trigger the modal with a button -->
-              <button type="button" class="btn-sm" data-toggle="modal" data-target="#myModal" style="color: white;"><SMall>DÉCOUVRIR L'OFFRE</SMall></button><br><br>
-             
-             
-        
-              <!-- Modal -->
-              <div class="modal fade" id="myModal" role="dialog">
-                <div class="modal-dialog">
-                
-                  <!-- Modal content-->
-                  <div class="modal-content">
-                    <div class="modal-header">
-                      <button type="button" class="close" data-dismiss="modal">&times;</button>
-                      <h4 class="modal-title">DETAILS</h4>
-                    </div>
-                    <div class="modal-body">
-                      <h2>cdiscount</h2>
-                      <button type="button" style=" background-color: whitesmoke; height: 37px; width:100%;">
-                        <p> 50FABFAB</p>
-                      </button><br><br>
-                      <button type="button" style="float: right; background-color: hsl(308, 82%, 30%); height: 33px;">
-                        <a href="www.nike.com" style="color:white;">LIENS VERS LA PAGE</a>
-                      </button><br><br>
-                      <button type="button" style=" background-color: plum; height: 37px; width:100%; color:  hsl(308, 82%, 30%);">
-                        <p> EXPIRE LE 02 JUIN 2020 À 23h:59</p>
-                      </button><br><br>
-                    </div>
-                    <div class="modal-footer">
-                      <button type="button" class="btn btn-default" data-dismiss="modal">FERMER</button>
-                    </div>
-                  </div>
-                  
-                </div>
-              </div>
-              <!-- fin modal-->
-              <p>NO CODE REQUIRED</p>
-            </div>
-              <!-- fin container bas-->
-        </div>
-
-        <div class="containerquatre">
-            <img src="lesimages/misguideun.png" alt="img c discount" class="imgcontun">
-               
-             <!-- debut contenu du bas -->
-            <div class="container">
-              <a href="www.misguidedfr.com" style="color: black;">www.misguidedfr.com</a><br><br>
-              <!-- debut Modal -->
-              
-              <!-- Trigger the modal with a button -->
-              <button type="button" class="btn-sm" data-toggle="modal" data-target="#myModal" style="color: white;"><SMall>DÉCOUVRIR L'OFFRE</SMall></button><br><br>
-             
-             
-        
-              <!-- Modal -->
-              <div class="modal fade" id="myModal" role="dialog">
-                <div class="modal-dialog">
-                
-                  <!-- Modal content-->
-                  <div class="modal-content">
-                    <div class="modal-header">
-                      <button type="button" class="close" data-dismiss="modal">&times;</button>
-                      <h4 class="modal-title">DETAILS</h4>
-                    </div>
-                    <div class="modal-body">
-                      <h2>cdiscount</h2>
-                      <button type="button" style=" background-color: whitesmoke; height: 37px; width:100%;">
-                        <p> 50FABFAB</p>
-                      </button><br><br>
-                      <button type="button" style="float: right; background-color: hsl(308, 82%, 30%); height: 33px;">
-                        <a href="www.misguidedfr.com" style="color:white;">LIENS VERS LA PAGE</a>
-                      </button><br><br>
-                      <button type="button" style=" background-color: plum; height: 37px; width:100%; color:  hsl(308, 82%, 30%);">
-                        <p> EXPIRE LE 02 JUIN 2020 À 23h:59</p>
-                      </button><br><br>
-                    </div>
-                    <div class="modal-footer">
-                      <button type="button" class="btn btn-default" data-dismiss="modal">FERMER</button>
-                    </div>
-                  </div>
-                  
-                </div>
-              </div>
-              <!-- fin modal-->
-              <p>RMN20</p>
-            </div>
-              <!-- fin container bas-->
-         
-               </div>
-
-        <div class="containercinq">
-            <img src="lesimages/sarenzaun.png" alt="img c discount" class="imgcontun">
-              
-             <!-- debut contenu du bas -->
-            <div class="container">
-              <a href="www.sarenza.com" style="color: black;">www.sarenza.com</a><br><br>
-              <!-- debut Modal -->
-              
-              <!-- Trigger the modal with a button -->
-              <button type="button" class="btn-sm" data-toggle="modal" data-target="#myModal" style="color: white;"><SMall>DÉCOUVRIR L'OFFRE</SMall></button><br><br>
-             
-             
-        
-              <!-- Modal -->
-              <div class="modal fade" id="myModal" role="dialog">
-                <div class="modal-dialog">
-                
-                  <!-- Modal content-->
-                  <div class="modal-content">
-                    <div class="modal-header">
-                      <button type="button" class="close" data-dismiss="modal">&times;</button>
-                      <h4 class="modal-title">DETAILS</h4>
-                    </div>
-                    <div class="modal-body">
-                      <h2>cdiscount</h2>
-                      <button type="button" style=" background-color: whitesmoke; height: 37px; width:100%;">
-                        <p> 50FABFAB</p>
-                      </button><br><br>
-                      <button type="button" style="float: right; background-color: hsl(308, 82%, 30%); height: 33px;">
-                        <a href="www.sarenza.com" style="color:white;">LIENS VERS LA PAGE</a>
-                      </button><br><br>
-                      <button type="button" style=" background-color: plum; height: 37px; width:100%; color:  hsl(308, 82%, 30%);">
-                        <p> EXPIRE LE 02 JUIN 2020 À 23h:59</p>
-                      </button><br><br>
-                    </div>
-                    <div class="modal-footer">
-                      <button type="button" class="btn btn-default" data-dismiss="modal">FERMER</button>
-                    </div>
-                  </div>
-                  
-                </div>
-              </div>
-              <!-- fin modal-->
-              <p>ONLYYOU20</p>
-            </div>
-              <!-- fin container bas-->
-        </div>
-        
-
+      <!--image baner est contenu dans cette balise -->
+        <img src="lesimages/Banner.png" class="imgbaner" alt="image baner">          
     </section>
+    <!--ce div .container va contenir le navbar, le sidebar et contrnu du milieu -->
+    <div class="container">
+      <!--ce div .categories va contenir toute la partie de gauche ou sidebar -->
+      <div class="categories">
+        <h1 class="categories-title">CATEGORIES<i class="fa fa-sort-desc"></i></h1>
+        <h3 class="categories-subtitle">toutes les catégories</h3>
+        <!--form va contenir l'ensemble de nos categories -->
+        <form action="" class="categories-filter">
+          <!--chaque catégorie est mit dans un div .category-field -->
+            <div class="all-categories-field">
+            <div class="category-field">
+              <input type="checkbox">
+              <label for="">deco , amenagement maison et cuisine</label>
+            </div>
+            <div class="category-field">
+              <input type="checkbox">
+              <label for="">deco , amenagement maison et cuisin</label>
+            </div>
+            <div class="category-field">
+              <input type="checkbox">
+              <label for="">deco , amenagement maison et cuisi</label>
+            </div>
+            <div class="category-field">
+              <input type="checkbox">
+              <label for="">deco , amenagement maison et cuis</label>
+            </div>
+            <div class="category-field">
+              <input type="checkbox">
+              <label for="">deco , amenagement maison et cuisine</label>
+            </div>
+            <div class="category-field">
+              <input type="checkbox">
+              <label for="">deco , amenagement maison et cui</label>
+            </div>
+            <div class="category-field">
+              <input type="checkbox">
+              <label for="">deco , amenagement maison et cu</label>
+            </div>
+            <div class="category-field">
+              <input type="checkbox">
+              <label for="">deco , amenagement maison et cu</label>
+            </div>
+            <div class="category-field">
+              <input type="checkbox">
+              <label for="">deco , amenagement maison et cuisine</label>
+            </div>
+          </div>
+          <button type="submit" class="btn-categories-filter">Filtrer</button>
+        </form>
+
+      </div>
+    <!-- la partie du mileu est contenu dans ce div inner content-->
+      <div class="inner-content">
+        <!-- ce div .filters contient notre navbar-->
+        <form class="filters">
+         <!-- ce div .search-form-field contient la partie de gauche du navbar-->
+          <div class="search-form">
+            <!-- ce div .search-form-field contient a la fois notre icon search et le input gauche navbar-->
+            <div class="search-form-field">
+              <i class="fa fa-search"></i>
+              &nbsp;
+              <input type="search" class="search-form-input" placeholder="reseach here">
+            </div>
+          </div>
+             <!-- ce div .search-checkbox contient l'ensemble de la partie navbar de  droite-->
+          <div class="search-checkbox">
+            <!-- chaque input et label est contenu dans un  search-checkbox-field-->
+            <div class="search-checkbox-field">
+              <input type="checkbox" name="country" id="usa">
+              <label for="usa">USA</label>
+            </div>
+
+            <div class="search-checkbox-field">
+              <input type="checkbox" name="country" id="chine">
+              <label for="chine">CHINE</label>
+            </div>
+
+            <div class="search-checkbox-field">
+              <input type="checkbox" name="country" id="france">
+              <label for="france">FRANCE</label>
+            </div>
+            <button type="submit" class="search-checkbox-submit">FILTRER</button>
+          </div>
+
+        </form>
+        <!-- ce div .card-content contient l'ensemble de nos card-->
+        <div class="card-content">
+          <!-- chaque carte est contenu dans un div .card-->
+          <div class="card has-label" data-text="23% bon plan" >
+            <div class="card-image">
+              <img src="lesimages/asosun.png" alt="image asos">
+            </div>
+            <div class="card-info">
+              <!-- ce div website-info contient le lien et le bouton découvrir l'offre-->
+              <div class="website-info">
+                <a href="www.asos.com">www.asos.com</a>
+                <button data-target="#modal-overlay" data-toggle="modal">DECOUVRIR L'OFFRE</button>
+              </div>
+                 <!-- ce div codepromo contient le code promo-->
+              <div class="code-promo">
+                <span>
+                  12FABFAB
+                </span>
+              </div>
+            </div>
+          </div>
+          <div class="card has-label" data-text="30% bon plan">
+            <div class="card-image">
+              <img src="lesimages/cdiscountun.png" alt="image asos">
+            </div>
+            <div class="card-info">
+              <div class="website-info">
+                <a href="www.asos.com">www.asos.com</a>
+                <button data-target="#modal-overlay" data-toggle="modal">DECOUVRIR L'OFFRE</button>
+              </div>
+            
+              <div class="code-promo">
+                <span>
+                  12FABFAB
+                </span>
+              </div>
+            </div>
+          </div>
+          <div class="card has-label" data-text="30% bon plan">
+            <div class="card-image">
+              <img src="lesimages/nikeun.png" alt="image asos">
+            </div>
+            <div class="card-info">
+              <div class="website-info">
+                <a href="www.asos.com">www.asos.com</a>
+                <button data-target="#modal-overlay" data-toggle="modal">DECOUVRIR L'OFFRE</button>
+              </div>
+            
+              <div class="code-promo">
+                <span>
+                  12FABFAB
+                </span>
+              </div>
+            </div>
+          </div>
+          <div class="card has-label" data-text="30% bon plan">
+            <div class="card-image">
+              <img src="lesimages/misguideun.png" alt="image asos">
+            </div>
+            <div class="card-info">
+              <div class="website-info">
+                <a href="www.asos.com">www.asos.com</a>
+                <button data-target="#modal-overlay" data-toggle="modal">DECOUVRIR L'OFFRE</button>
+              </div>
+            
+              <div class="code-promo">
+                <span>
+                  12FABFAB
+                </span>
+              </div>
+            </div>
+          </div>
+          <div class="card has-label" data-text="30% bon plan">
+            <div class="card-image">
+              <img src="lesimages/sarenzaun.png" alt="image asos">
+            </div>
+            <div class="card-info">
+              <div class="website-info">
+                <a href="www.asos.com">www.asos.com</a>
+                <button data-target="#modal-overlay" data-toggle="modal">DECOUVRIR L'OFFRE</button>
+              </div>
+            
+              <div class="code-promo">
+                <span>
+                  12FABFAB
+                </span>
+              </div>
+            </div>
+          </div>
+          <div class="card has-label" data-text="30% bon plan">
+            <div class="card-image">
+              <img src="lesimages/asosun.png" alt="image asos">
+            </div>
+            <div class="card-info">
+              <div class="website-info">
+                <a href="www.asos.com">www.asos.com</a>
+                <button data-target="#modal-overlay" data-toggle="modal">DECOUVRIR L'OFFRE</button>
+              </div>
+            
+              <div class="code-promo">
+                <span>
+                  12FABFAB
+                </span>
+              </div>
+            </div>
+          </div>
+          
+        </div>
+      </div>
+
+    </div>
+    <script>
+      const modalnodes = document.querySelectorAll('.modal-closer')
+      const modals = Array.from(modalnodes)
+      modals.forEach(function(modal){
+        modal.addEventListener('click' , function(event){
+          event.preventDefault()
+          const target = event.target.dataset.target
+          document.querySelector(target).classList.remove('show')
+        })
+      })
+      const buttonnodes = document.querySelectorAll('[data-toggle="modal"]')
+      const buttons = Array.from(buttonnodes)
+      buttons.forEach(function(button){
+         button.addEventListener('click' , function(event){
+          event.preventDefault()
+          const target = event.target.dataset.target
+          document.querySelector(target).classList.add('show')
+        })
+      })
+
+
+      const sidenav = document.getElementById('sidenav')
+      const sidenavCloser = document.getElementById('sidenav-closer')
+      const hamburgerButton = document.getElementById('hamburger-button')
+      hamburgerButton.addEventListener('click', function(){
+        sidenav.classList.add('show')
+      })
+      sidenavCloser.addEventListener('click', function(){
+        sidenav.classList.remove('show')
+
+      })
+
+    </script>
 </body>
 </html>

@@ -1,120 +1,522 @@
+@import url('https://fonts.googleapis.com/css?family=Quattrocento+Sans&display=swap');
 
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 .site{
-    display: grid;
-    grid-template-rows: 21% 5% 21% 21% 21%;
-    grid-template-columns: 27% 34% 33%;
-    grid-column-gap: 2%;
-    grid-row-gap: 21px;
+   
     background-color: rgb(244, 233, 252);
 }
+html,body{
+    font-family:Quattrocento Sans;
+    position: relative;
+}
+
+.hamburger-button{
+    top: 0;
+    left: 0;
+    position: fixed;
+    padding: 20px;
+    background-color: black;
+    color: white;
+    font-size: 1.3em;
+    border: none;
+    border-radius: none;
+    cursor: pointer;
+    display: none;
+    z-index: 800;
+}
+
+.sidenav{
+    display: none;
+    
+}
+
+ 
 
  /*css baner debut*/
- .imgbaner{
+.imgbaner{
     width: 100%;
     display: flex;
-    grid-column: 1/ span3;
-    grid-row: 1;
-    
-  }
- 
-  /*css baner fin*/
-
-.sidebar {
-    background-color: whitesmoke;
-    border: solid 1px black;
-    grid-column: 1 ;
-    grid-row: 2/span 4 ;
-    width: 100%;
+    height: 325px;
+    /*grid-column: 1/ span3;
+    grid-row: 1;*/
     
 }
-/*ca c le css de l'icon du sidebar*/
-.imgicon{
-    float: right;
-}
-/*
-le header contient le navbar voici son css
-*/
-.header{
-    background-color: #bd1198;
-    border: solid 1px white; 
-    grid-column: 2/ span2;
-    grid-row: 2;
-}
-
- /*le ul permet de donner du style à l'ensemble du navbar*/
- ul {
-    list-style-type: none;
-    padding: 0;
-    overflow: hidden;
-    background-color: #bd1198;
-  }
-  /*css des li qui sont orienté à droite*/
-  li {
-    float: right;
-  }
-
-.containerun{
-    background-color: plum;
-    border: solid 1px white; 
-    grid-column: 2;
-    grid-row: 3;
-
-}
-
-.imgcontun {
-    width: 100%;
-    display: grid;
-}
-
-.containerdeux{
-    background-color: plum;
-    border: solid 1px white; 
-    grid-column: 3;
-    grid-row: 3;
-
-}
-
-.containertrois{
-    background-color: plum;
-    border: solid 1px white; 
-    grid-column: 2;
-    grid-row: 4;
-
-}
-
-.containerquatre{
-    background-color: rgb(192, 176, 209);
-    border: solid 1px white; 
-    grid-column: 3;
-    grid-row: 4;
-
-}
-
-.containercinq{
-    background-color: rgb(192, 176, 209);
-    border: solid 1px white; 
-    grid-column: 2;
-    grid-row: 5;
-
-}
-
+ /*cela nous permet de dire que la partie du mileu va contenir min logueur total - longueur image baner*/
 .container{
- /*display: flex;
- flex-direction: column;
- align-items: center;*/
- align-content: center;
+    display: flex;
+    min-height: calc(100vh - 325px);
+    padding-left:40px ;
+    padding-top:35px ;
+    padding-right:40px ;  
+     
+}
+/*la partie de gauche sera 300px*/
+.categories{
+    width: 300px;
+    margin-right: 15px;
 
 }
-/*CSS DU MODAL*/
+/**margin botom c pr k le text respire un peu */
+.categories-title,.categories-subtitle{
+    margin-bottom: 20px;
+    text-transform: uppercase;
+}
+/*font size c pr la taille du text*/
+.categories-title{
+    display: flex;
+    justify-content: space-between;
+    font-size: 1.2em;
+    border-top: 1px solid gray;
+    
+}
+.categories-subtitle{
+    font-size: 1em;
+    color: #888;
+    border-bottom: 1px solid gray;
+    
+}
+/*c pr l'espacement entre l'ensemble des catégories*/
+.category-field{
+    margin-bottom: 15px;
+}
+/*css du button filter des categories sur le sidebar a gauche*/
+.btn-categories-filter{
+   padding: 10px;
+   width: 100%;
+   color: white;
+   background-color: rgb(59, 27, 94);
+   text-decoration: none;
+   border: none;
+   
+}
+/**/
 
-.btn-sm{
-    background-color: #8d1d7a;
+.all-categories-field{
+    border-bottom: 1px solid black;
+    margin-bottom: 10px;
+}
+
+
+/*la partie du milieu aura pr largeur 100/100 - 300px de gauche*/
+.inner-content{
+    width: calc(100% - 300px);
+    display: flex;
+    flex-direction: column;
+
+
+}
+/*filters contient les dimension et astuce du navbar*/
+.filters{
+  min-height: 70px;
+  background-color: rgb(149, 105, 176);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 20px;
+}
+
+/*ceci permet de mettre l'apparence qui permet de mettre le input com si l'icon est a l'in terieur*/
+.search-form-field{
+    background-color: white;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    
+}
+/*ceci permet de supprimer la bordure sur l'input et aussi les soulignements*/
+.search-form-input{
+    border: none;
+    outline: none;
+}
+/*css de l'ensemble de la partie de droite*/
+.search-checkbox{
+   display: flex;
+   /*ce align items center nous permet de centrer les element suivant la vertical par rapport a son element parent*/
+   align-items: center;
+}
+/*le .search-checkbox-field gere le css de chak checkbox de droite et son label */
+.search-checkbox-field{
+    /*le margin right nous permet de mettre des espaces entre les ls diferentes parties de droite*/
+    margin-right: 10px;
+}
+/*ceci gére notre button submit de notre partie de droite*/
+.search-checkbox-submit{
+    padding: 10px;
+    background-color: white;
+    border: none;
+    /*ce border radius gére la courbure des angles de notre button*/
+    border-radius: none;
+}
+
+/*css de l'ensemble des card*/
+.card-content{
+    /*La propriété flex définit la capacité d'un élément flexible à modifier ses dimensions afin de remplir l'espace disponible de son conteneur.*/
+    flex: 1;
+    background-color: rgb(241, 237, 251);
+    display: grid;
+    grid-template-columns:49% 49%;
+    grid-gap: 20px;
+    padding: 20px;
+}
+
+/*css de chaque card*/
+.card{
+    z-index: 10;
+    background-color: rgb(212, 203, 230);
+    min-height: 300px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    /*position relative c pr gerer l'image du code promo qui survole notre card*/
+    position: relative;
+    /*overflow définit comment gérer le dépassement du contenu d'un élément dans son bloc*/
+    overflow: hidden;
+
+} 
+
+/*css qui permet de placer ce bande avec les pourcentage des promos qui survol notre card*/
+.card.has-label::before{
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 40px;
+    background-color: rgb(177, 84, 245) ;
+    width: 70%;
+    content: attr(data-text);
+    transform: rotate(45deg) translateX(31%) translateY(-50px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 14px;
+    color: white;
+    text-transform: uppercase;
+    
+}
+
+/*css du cintenu du bas cad link et boutton popups*/
+.card-info{
+   
+    background-color: rgb(212, 203, 230);
+    /*flex transform un element en conteneur flexible*/
+    display: flex;
+    /*flex-direction définit la façon dont les éléments flexibles sont placés dans un conteneur 
+    flexible*/
+    flex-direction: column;
+}
+/*ceci correspond aux images des carte ou card */
+.card-image{
+    flex: 1;
+    display: flex;
+    overflow: hidden;
+}
+
+.card-image img{
+    width: 100%;
+}
+/*ceci correspond au css du code promo en question EX 14FABFAB*/
+.code-promo{
+    height: 40px;
+    display: flex;
+    align-items: center;
+    /*le justify content nous permet d'aligner l'element au milieu suivant l'horizontal*/
+    justify-content: center;
+    /*ce border top dashed gére les pointillé*/
+    border-top: 2px dashed rgb(60, 27, 96);
+
+}
+/*css du contenu link et button*/
+.website-info{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    padding: 15px 0;
+}
+/*contient le lien et boutton du popups*/
+.website-info a{
+    display: inline-block;
+    margin-bottom:10px ;
+    color:rgb(60, 27, 96) ;
+    text-decoration: none;
+    
+
+}
+/*ceci gére le boutton du decouvrir l'offre */
+.website-info button{
+    background-color:rgb(60, 27, 96);
+    padding: 12px 20px;
+    color: white;
+    border: none;
+    /*cursor pointer gére cette apparence de la main lorsqu'on survorl un bourton*/
+    cursor: pointer;
+    pointer-events: all;
+}
+
+/*css de la couleur du text du code promo*/
+.code-promo span{
+    color:rgb(60, 27, 96) ;
+}
+
+/*CSS DU MODAL*/
+.modal-overlay{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+    position: fixed;
+    top:0;
+    left:0;
+    right:0;
+    bottom:0;
+    background-color: rgba(0, 0, 0, 0.4);
+    opacity: 0;
+    pointer-events: none;
+    transition: .3s;
+}
+.modal-overlay.show{
+    opacity: 1;
+    pointer-events: all;
+}
+
+.modal{
+   
+    transform: translateY(-50px);
+    transition: .5s;
+    background-color:white;
+    height: 340px;
+    width: 550px;
+    
+    border: 8px solid rgb(60, 27, 96);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.modal-overlay.show .modal{
+    transform: translateY(0);
+
+}
+
+.modal-header{
+    height:40px ;
+    display: flex;
+    align-items: center;
+    padding: 0 10px;
+    justify-content: space-between;
+
+}
+
+.modal-closer{
+    border: none;
+    background: none;
+    outline: none;
+    /*quand on survole l'element on aura unee forme de main */
+    cursor: pointer;
+    /*c por augmenter la taille d' */
+    font-size: 1.1em;
+    color:#ccc;
+    
+}
+
+.modal-closer i{
+    pointer-events: none;
+}
+
+.modal-closer:hover{
+   color:black;
+}
+
+.modal-body{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0 10px;
+    flex: 1;
+}
+.modal-codepromo{
+    width: 100%;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #f5f5f5;
+    margin-top: 20px;
+    border: 1px solid #ccc;
+}
+
+.modal-code-promo-link{
+    background-color: rgb(60, 27, 96);
+    padding: 12px 17px;
+    margin-top: 20px;
+    align-self: flex-end;
+    color: white;
+    text-decoration: none;
+    text-transform: uppercase;
+    
+}
+.modal-description{
+    height: 70px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;    
     text-align: center;
 }
-
-.modal-body h2{
- text-align: center;
+.modal-expiration{
+    height: 30px;
+    background-color: rgb(212, 203, 230);
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
+
+@media only screen and (max-width: 592px){
+    .categories{
+        display: none;
+    }
+    .inner-content{
+        width: 100%;
+    }
+
+    .card-content{
+        grid-template-columns: 100%;
+    }
+
+    /*css qui permet de placer ce bande avec les pourcentage des promos qui survol notre card*/
+    .card.has-label::before{
+        position: absolute;
+        top: 0;
+        right: 0;
+        left: 0;
+        height: 40px;
+        background-color: rgba(177, 84, 245, 0.8) ;
+        transform: translate(0,0) rotate(0deg);
+        width: 100%;
+        content: attr(data-text);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 14px;
+        color: white;
+        text-transform: uppercase;
+        
+    }
+
+    .hamburger-button{
+        display: block;
+        padding: 8px;
+        
+    }
+
+    .imgbaner{
+        height: 170px;
+    }
+    .container{
+        padding: 10px 10px 10px 10px ;
+    }
+    .filters{
+        flex-direction: column;
+        padding: 10px;
+    }
+    .search-checkbox{
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: flex-start;
+        align-self: flex-start;
+        margin-top: 15px;
+        
+    }
+
+    .search-form{
+        align-self: flex-start;
+        width: 100%;
+    }
+
+
+    .search-checkbox-submit{
+        margin-top: 10px;
+       
+    }
+    .sidenav{
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 70%;
+        height: 100vh;
+        background-color: white;
+        z-index: 900;
+        padding: 10px;
+        transform: translateX(-100%);
+        pointer-events: none;
+        transition: 0.5s;
+        
+
+    }
+
+    .sidenav.show{
+        transform: translateX(0);
+        pointer-events: all;
+    }
+
+
+    .sidenav-title h1{
+        margin-bottom: 10px;
+        text-transform: uppercase;
+        font-size: .9em;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    .sidenav-title h1 button{
+        border:none;
+        outline:none;
+        background:none;
+        cursor: pointer;
+        transition: 0.5s;
+        
+    }
+    .sidenav-title h1 button:hover{
+        color: red;
+        transform: scale(1.1);
+    }
+
+    .sidenav-title h3{
+       text-transform: uppercase; 
+       font-size: 0.7em;
+       margin-bottom :20px ;
+    }
+
+    .sidenav-category-field{
+        margin-bottom: 10px;
+        display: flex;
+        align-items: center;
+    }
+
+    .sidenav-category-field label{
+        text-transform: uppercase;
+        font-size: 0.7em;
+        font-weight: bolder;
+        margin-left: 8px;
+    }
 
 
     
+}
+
+/*La propriété align-content définit la façon dont les elements d'un cnteneur sont reparties le long
+de l'axe horizontal lorsque celui-ci est un conteneur de boîte flexible et le long de l'axe
+ vertical lorsque le conteneur est une grille.*/
+
+ /*
+ La propriété CSS align-items définit la valeur de align-self sur l'ensemble
+  des éléments-fils directs. La propriété align-self définit elle l'alignement
+  d'un objet au sein de son conteneur. Pour les boîtes flexibles suivant la vertical
+  */
+
+  /*La propriété CSS justify-content indique la façon dont l'espace doit être réparti entre et 
+   autour des éléments selon l'axe principal d'un conteneur
+   flexible ou selon l'axe en ligne lorsque le conteneur est une grille.*/
