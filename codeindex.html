@@ -14,43 +14,46 @@
 <body>
 
   <button class="hamburger-button" id="hamburger-button"><i class="fa fa-bars"></i></button>
-  <div class="sidenav" id="sidenav">
-    <div class="sidenav-title">
-      <h1><span>categories</span><button id="sidenav-closer"><i class="fa fa-times"></i></button></h1>
-      <h3>toutes les catégories</h3>
-    </div>
-    <form action="" class="sidenav-categories">
-      <div class="sidenav-category-field">
-        <input type="checkbox">
-        <label for="">deco , amenagement maison et cuisine</label>
-      </div>
-      <div class="sidenav-category-field">
-        <input type="checkbox">
-        <label for="">deco , amenagement maison et cuisine</label>
-      </div>
-      <div class="sidenav-category-field">
-        <input type="checkbox">
-        <label for="">deco , amenagement maison et cuisine</label>
-      </div>
-      <div class="sidenav-category-field">
-        <input type="checkbox">
-        <label for="">deco , amenagement maison et cuisine</label>
-      </div>
-      <div class="sidenav-category-field">
-        <input type="checkbox">
-        <label for="">deco , amenagement maison et cuisine</label>
-      </div>
-      <div class="sidenav-category-field">
-        <input type="checkbox">
-        <label for="">deco , amenagement maison et cuisine</label>
-      </div>
-      <div class="sidenav-category-field">
-        <input type="checkbox">
-        <label for="">deco , amenagement maison et cuisine</label>
-      </div>
 
-      <button type="submit" class="btn-categories-filter">Filtrer</button>
-    </form>
+  <div class="sidenav-overlay" id="sidenav-overlay">
+    <div class="sidenav" id="sidenav">
+      <div class="sidenav-title">
+        <h1><span>categories</span><button id="sidenav-closer"><i class="fa fa-times"></i></button></h1>
+        <h3>toutes les catégories</h3>
+      </div>
+      <form action="" class="sidenav-categories">
+        <div class="sidenav-category-field">
+          <input type="checkbox">
+          <label for="">deco , amenagement maison et cuisine</label>
+        </div>
+        <div class="sidenav-category-field">
+          <input type="checkbox">
+          <label for="">deco , amenagement maison et cuisine</label>
+        </div>
+        <div class="sidenav-category-field">
+          <input type="checkbox">
+          <label for="">deco , amenagement maison et cuisine</label>
+        </div>
+        <div class="sidenav-category-field">
+          <input type="checkbox">
+          <label for="">deco , amenagement maison et cuisine</label>
+        </div>
+        <div class="sidenav-category-field">
+          <input type="checkbox">
+          <label for="">deco , amenagement maison et cuisine</label>
+        </div>
+        <div class="sidenav-category-field">
+          <input type="checkbox">
+          <label for="">deco , amenagement maison et cuisine</label>
+        </div>
+        <div class="sidenav-category-field">
+          <input type="checkbox">
+          <label for="">deco , amenagement maison et cuisine</label>
+        </div>
+
+        <button type="submit" class="btn-categories-filter">Filtrer</button>
+      </form>
+    </div>
   </div>
 
    <div class="modal-overlay" id="modal-overlay">
@@ -84,7 +87,7 @@
 
     <section class="site">
       <!--image baner est contenu dans cette balise -->
-        <img src="lesimages/Banner.png" class="imgbaner" alt="image baner">          
+        <img src="lesimages/IMG-banner-bonformat.jpg" class="imgbaner" alt="image baner">          
     </section>
     <!--ce div .container va contenir le navbar, le sidebar et contrnu du milieu -->
     <div class="container">
@@ -303,16 +306,41 @@
       })
 
 
+      function openSidenav() {
+        sidenav.classList.add('show') 
+        sidenavOverlay.classList.add('show');
+      }
+      function closeSidenav() {
+        sidenav.classList.remove('show') 
+        sidenavOverlay.classList.remove('show');
+      }
+
       const sidenav = document.getElementById('sidenav')
       const sidenavCloser = document.getElementById('sidenav-closer')
       const hamburgerButton = document.getElementById('hamburger-button')
-      hamburgerButton.addEventListener('click', function(){
-        sidenav.classList.add('show')
-      })
-      sidenavCloser.addEventListener('click', function(){
-        sidenav.classList.remove('show')
+      const sidenavOverlay = document.getElementById('sidenav-overlay')
+      hamburgerButton.addEventListener('click', openSidenav)
+      sidenavCloser.addEventListener('click', closeSidenav);
 
+      sidenav.addEventListener('click', function(event){
+        event.stopPropagation();
       })
+      
+      sidenavOverlay.addEventListener('click', function(event){
+        event.preventDefault()
+        event.stopPropagation()
+        closeSidenav()
+      });
+
+      document.addEventListener('keyup', function(event){
+        if(event.key == 'Escape') {
+          if(sidenav.classList.contains('show')) {
+            closeSidenav()
+          }
+          
+        }
+      })
+      
 
     </script>
 </body>
